@@ -1,19 +1,17 @@
 package learn
 
-import "testing"
+import (
+	"testing"
+
+	"github.com/stretchr/testify/assert"
+)
 
 func TestAbsolute(t *testing.T) {
 	c := Absolute(-5)
-	if c != 5 {
-		t.Logf("expect 5, but go %d", c)
-		t.Fail()
-	}
+	assert.Equal(t, 5, c)
 }
 
 func TestAbsolute_WithPositive(t *testing.T) {
 	c := Absolute(5)
-	if c != 5 {
-		t.Logf("expect 5, but go %d", c)
-		t.Fail()
-	}
+	assert.Equal(t, 5, c)
 }
